@@ -328,6 +328,47 @@ MIT License
 
 欢迎提交Issue和Pull Request！
 
+## 开发
+
+### GitHub Actions
+
+本项目使用 GitHub Actions 进行持续集成和自动发布：
+
+**CI 工作流**（`.github/workflows/ci.yml`）
+- 每次推送或 PR 时自动运行
+- 多版本 Python 测试（3.10, 3.11, 3.12）
+- 代码风格检查（flake8, black, isort）
+- 自动构建测试
+
+**发布工作流**（`.github/workflows/publish.yml`）
+- 创建 Release 时自动发布到 PyPI
+- 需要配置 `PYPI_API_TOKEN` 密钥
+
+查看工作流状态：https://github.com/jiaxinghit/feishu-enhance-mcp/actions
+
+### 本地开发
+
+```bash
+# 克隆仓库
+git clone https://github.com/jiaxinghit/feishu-enhance-mcp.git
+cd feishu-enhance-mcp
+
+# 创建虚拟环境
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# 或 venv\Scripts\activate  # Windows
+
+# 安装开发依赖
+pip install -e ".[dev]"
+
+# 运行测试
+pytest
+
+# 代码格式化
+black feishu_enhance_mcp
+isort feishu_enhance_mcp
+```
+
 ## 更新日志
 
 ### v0.1.0
@@ -336,3 +377,4 @@ MIT License
 - 支持文件上传
 - 支持异步任务和定时任务
 - 采用解耦架构，消息接收与业务处理分离
+- 添加 GitHub Actions CI/CD 工作流
