@@ -134,8 +134,7 @@ class MessageProcessor:
                 # 默认处理：直接回复
                 result = ProcessingResult(
                     success=True,
-                    message=f"收到消息: {content}",
-                    data={"original_content": content}
+                    message=f"收到你的消息了，有什么可以帮助你的吗？"
                 )
             
             # 发送回复
