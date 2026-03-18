@@ -1,5 +1,5 @@
 {
-    "mcp_command": "python -m lark_mcp.server",
+    "mcp_command": "python -m feishu_enhance_mcp.server",
     "working_dir": "D:\\IDEA\\lark-trae-bridge\\lark-mcp",
     "auto_restart": true,
     "max_restarts": 10,

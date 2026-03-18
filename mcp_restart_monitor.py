@@ -40,7 +40,7 @@ class MCPServiceManager:
     def _load_config(self) -> dict:
         """加载配置"""
         default_config = {
-            "mcp_command": "python lark_mcp_server.py",
+            "mcp_command": "python -m feishu_enhance_mcp.server",
             "working_dir": str(Path(__file__).parent),
             "auto_restart": True,
             "max_restarts": 10,

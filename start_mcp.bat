@@ -15,6 +15,6 @@ if errorlevel 1 (
 
 echo [信息] 启动 Lark MCP Server...
 echo [提示] 此服务同时运行飞书长连接和MCP服务
-python -m lark_mcp.server
+python -m feishu_enhance_mcp.server
 
 pause

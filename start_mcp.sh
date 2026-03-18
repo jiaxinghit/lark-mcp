@@ -22,4 +22,4 @@ pip3 install -r requirements.txt -q
 
 echo "[信息] 启动 Lark MCP Server..."
 echo "[提示] 此服务同时运行飞书长连接和MCP服务"
-python3 lark_mcp_server.py
+python3 -m feishu_enhance_mcp.server

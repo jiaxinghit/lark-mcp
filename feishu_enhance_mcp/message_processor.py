@@ -160,14 +160,12 @@ class MessageProcessor:
         try:
             if result.success:
                 text = result.message
-                if result.data:
-                    text += f"\n\n详细信息: {json.dumps(result.data, ensure_ascii=False, indent=2)}"
             else:
                 text = f"❌ {result.message}"
                 if result.error:
-                    text += f"\n错误: {result.error}"
+                    text += f"\n错误：{result.error}"
             
-            # 使用reply_message回复原消息
+            # 使用 reply_message 回复原消息
             reply_result = self._lark_client.reply_message(message_id, text)
             
             if reply_result.get('success'):
